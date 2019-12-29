@@ -1,4 +1,7 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed, wait, ALL_COMPLETED, FIRST_COMPLETED
+from concurrent.futures import Future
+
+# 未来对象, task的返回容器
 
 # 线程池, 为什么要线程池
 # 主线程中可以获取某一个线程的状态或者某一个任务的状态, 以及返回值.
