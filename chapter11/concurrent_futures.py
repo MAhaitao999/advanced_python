@@ -25,7 +25,7 @@ executor = ThreadPoolExecutor(max_workers=2)
 
 # 要获取已经成功的task的返回
 urls = [3, 4, 5, 6, 7]
-all_tasks = [executor.submit(get_html, (url)) for url in urls]
+all_tasks = [executor.submit(get_html, url) for url in urls]
 wait(all_tasks, return_when=FIRST_COMPLETED)
 print("main")
 # for future in as_completed(all_tasks):
